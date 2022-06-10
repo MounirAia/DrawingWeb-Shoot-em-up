@@ -1,0 +1,11 @@
+Always width*height and in px
+
+// EnemiesProjectile.png
+
+Tile Dimension: 8*8
+Hitbox: 2*2 at position on the tile (3,3)
+
+List Animations (AS: Animation Speed): 
+Idle: [0]
+Destroyed: [0 to 4]
+	
