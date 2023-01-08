@@ -19,3 +19,4 @@ Hitboxes:
 
 List Animations (AS: Animation Speed): 
 Spin: [0 to 3]
+Destroyed: [4,5]
