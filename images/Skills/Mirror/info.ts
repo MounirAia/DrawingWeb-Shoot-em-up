@@ -218,6 +218,3 @@ const Info = {
     },
   },
 };
-
-// The offset should be value positive or negative, in the game we just add the offset to the class
-// no need to figure out if we have substract it or not
