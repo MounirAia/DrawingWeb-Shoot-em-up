@@ -10,8 +10,12 @@ const Info = {
         Height: 24,
       },
       SpriteShiftPosition: {
-        X: 27,
-        Y: 20,
+        X: -27,
+        Y: -20,
+      },
+      SpriteShiftPositionOnPlayer: {
+        X: 38,
+        Y: -6,
       },
     },
     Hitbox: {
@@ -52,8 +56,12 @@ const Info = {
         Height: 24,
       },
       SpriteShiftPosition: {
-        X: 27,
-        Y: 20,
+        X: -27,
+        Y: -20,
+      },
+      SpriteShiftPositionOnPlayer: {
+        X: 38,
+        Y: -6,
       },
     },
     Hitbox: {
@@ -94,8 +102,12 @@ const Info = {
         Height: 24,
       },
       SpriteShiftPosition: {
-        X: 27,
-        Y: 20,
+        X: -27,
+        Y: -20,
+      },
+      SpriteShiftPositionOnPlayer: {
+        X: 38,
+        Y: -6,
       },
     },
     Hitbox: {
@@ -128,16 +140,22 @@ const Info = {
   Portal: {
     Meta: {
       TileDimensions: {
-        Width: 8,
-        Height: 8,
+        Width: 32,
+        Height: 32,
       },
       RealDimension: {
-        Width: 4,
-        Height: 5,
+        short: {
+          Width: 4,
+          Height: 5,
+        },
+        long: {
+          Width: 4,
+          Height: 24,
+        },
       },
       SpriteShiftPosition: {
-        X: 2,
-        Y: 2,
+        X: -4,
+        Y: -4,
       },
       SpriteShiftPositionOnMirror: [
         {
@@ -200,20 +218,58 @@ const Info = {
     },
     Animations: {
       Idle: {
-        FrameLengthInTime: 1,
+        FrameLengthInTime: Infinity,
         Frames: [0],
       },
       Detaching: {
-        FrameLengthInTime: 0.1,
-        Frames: [0, 1, 2, 3],
+        FrameLengthInTime: 6 / 60,
+        Frames: [1, 2, 3],
       },
       Attaching: {
-        FrameLengthInTime: 0.05,
-        Frames: [9, 10, 0],
+        FrameLengthInTime: 3 / 60,
+        Frames: [4, 5, 0],
       },
       Spawning: {
-        FrameLengthInTime: 0.05,
-        Frames: [4, 5, 6, 7, 8],
+        FrameLengthInTime: 3 / 60,
+        Frames: [6, 7, 8, 9, 10, 11, 12, 13, 14],
+      },
+      Generating: {
+        FrameLengthInTime: 6 / 60,
+        Frames: [15, 16, 17],
+      },
+      Disappearing: {
+        FrameLengthInTime: 3 / 60,
+        Frames: [14, 13, 12, 11, 10, 1, 2, 3],
+      },
+    },
+  },
+  ExplosiveEntity: {
+    Meta: {
+      TileDimensions: {
+        Width: 8,
+        Height: 8,
+      },
+      RealDimension: {
+        Width: 6,
+        Height: 5,
+      },
+      SpriteShiftPosition: {
+        X: -1,
+        Y: -1,
+      },
+    },
+    Hitbox: {
+      Width: 6,
+      Height: 5,
+    },
+    Animations: {
+      Idle: {
+        FrameLengthInTime: Infinity,
+        Frames: [0],
+      },
+      Destroyed: {
+        FrameLengthInTime: 3 / 60,
+        Frames: [1, 2, 3],
       },
     },
   },
